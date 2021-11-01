@@ -1,3 +1,8 @@
+from typing import Any, TypeVar
+
+T = TypeVar("T", int, float, str)
+
+
 def add(a: int, b: int) -> int:
     return a + b
 
@@ -19,4 +24,12 @@ def power(a: int, b: int) -> int:
 
 
 def combine(a: str, b: str) -> str:
-    pass
+    return a + b
+
+
+def add_float(a: float, b: float) -> float:
+    return a + b
+
+
+def no_type_add(a: T, b: T) -> T:
+    return a + b
